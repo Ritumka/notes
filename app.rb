@@ -109,11 +109,71 @@
 #     puts num
 # end
 
-words = ["elephant", "cat", "butterfly", "dog"]
-longest_word = ""
+# words = ["elephant", "cat", "butterfly", "dog"]
+# longest_word = ""
 
-words.each do |word|
-  longest_word = word if word.length > longest_word.length
+# words.each do |word|
+#   longest_word = word if word.length > longest_word.length
+# end
+
+# puts longest_word
+
+# person = {
+#   :name => "Alice",
+#   :age => 30,
+#   :city => "Chicago"
+# }
+
+# puts person.key("Alice")
+# puts person.key(30)
+
+# person
+
+# pp person.fetch(:name)
+# pp person.fetch(:age)
+
+# pp person[:name]
+# pp person[:age]
+
+# person = Hash.new
+# pp person
+
+# person.store(:first_name, "Alice")
+# person.store(:last_name, "Smith")
+# person.store(:city, "Chicago")
+
+# person = Hash.new
+
+# person[:first_name] = "Alice"
+# person[:last_name] = "Smith"
+# person[:city] = "Chicago"
+
+# pp person
+
+
+# array = ["summer", "fall", "winter", "spring"]
+# hash = {}
+
+# array.each do |word|
+#   hash.store(word, word.length)
+# end
+
+# puts hash
+
+ta_s = { "Chandhu" => 100, "Margo" => 92, "Benny" => 25 }
+total = 0
+worst_ta = ""
+worst_score = 100
+
+ta_s.each do |name, score|
+  puts "#{name} scored #{score}"
+  total += score
+
+  if score < worst_score  # If current score is lower, update worst_ta
+    worst_score = score
+    worst_ta = name
+  end
 end
 
-puts longest_word
+puts "Total score: #{total}"
+puts "#{worst_ta} is the worst TA with a score of #{worst_score}"

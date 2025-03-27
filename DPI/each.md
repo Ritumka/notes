@@ -1,7 +1,7 @@
 # Lesson: Iterating with Ruby's `.each` Method
 - In Ruby, most of our work involves managing lists—photos, messages, records, etc. The Array class is our go-to data structure for these lists, and looping over an array is one of the most common tasks. While you could use Integer’s `.times` method to iterate over an array (by counting its length), Ruby offers a more elegant solution with the Array’s `.each` method.
 
-### examples of `Array`
+## Examples of `Array`
 ```ruby
 a = []
 
