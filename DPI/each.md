@@ -51,31 +51,91 @@ end
 ## Examples
 ### looping through every element in array
 ```ruby
-array = ['h', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd']
+word = ["apple", "banana", "orange"].sample
+
+array = word.split("")
 
 array.each do |character|
-  pp "#{character.upcase}"
+    pp "#{character.upcase}"
 end
 ```
 
 ### even word?
 ```ruby
-list_of_words = ["zebra", "giraffe", "monkey", "salmon"]
+words = ["apple", "banana", "orange"]
 
-list_of_words.each do |word|
-  if word.even?
-    pp word
-  end
+words.each do |word|
+    length = word.length
+
+    if length.even?
+        pp word
+    end  
 end
 ```
 
 ### letter count?
-```ruby
-word = ["photo", "like", "commenter"].sample
+Get a word, print each letter in the word, and the number of times that letter appears.
 
-word.split("").each do |character|
-  count = word.count(character)
-  pp "#{character} appears #{count} times"
+```ruby
+word = ["apple", "banana", "orange"].sample
+
+array = word.split("")
+
+array.each do |character|
+    count = word.count(character)
+    pp "#{character} appears #{count} times"
+end
+```
+
+# Small challenges
+Double Each Number
+
+``` ruby
+numbers = [1, 2, 3]
+doubles = []
+
+numbers.each do |number|
+    number = number * 2
+    doubles.push(number)
+end
+
+pp doubles
+```
+
+Sum up numbers
+```ruby
+numbers = [10, 20, 30]
+sum = 0
+
+numbers.each do |number|
+    sum += number
+end
+
+pp sum
+```
+
+Count how many words have more than 4 letters
+```ruby
+words = ["apple", "dog", "elephant", "cat", "sunset"]
+count = 0
+
+words.each do |word|
+  count += 1 if word.length > 4
+end
+
+puts count
+```
+
+Multiply Odd Numbers by 3
+```ruby
+numbers = [2, 5, 8, 11, 14, 17]
+
+numbers.each do |num|
+    if num.odd?
+        num *= 3
+    end
+    
+    puts num
 end
 ```
 
