@@ -139,5 +139,21 @@ numbers.each do |num|
 end
 ```
 
+Find the Longest Word
+
+```ruby
+words = ["elephant", "cat", "butterfly", "dog"]
+longest_word = ""
+
+words.each do |word|
+  if word.length > longest_word.length
+    longest_word = word 
+  end
+
+end
+
+puts longest_word
+```
+
 # Conclusion
 The `.each` method is fundamental in Ruby for iterating over collections. It simplifies your code by eliminating manual counting and indexing, and makes your intentions clear.

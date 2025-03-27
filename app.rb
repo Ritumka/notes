@@ -100,11 +100,20 @@
 
 # puts count
 
-numbers = [2, 5, 8, 11, 14, 17]
+# numbers = [2, 5, 8, 11, 14, 17]
 
-numbers.each do |num|
-    if num.odd?
-        num *= 3
-    end
-    puts num
+# numbers.each do |num|
+#     if num.odd?
+#         num *= 3
+#     end
+#     puts num
+# end
+
+words = ["elephant", "cat", "butterfly", "dog"]
+longest_word = ""
+
+words.each do |word|
+  longest_word = word if word.length > longest_word.length
 end
+
+puts longest_word
