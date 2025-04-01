@@ -40,3 +40,48 @@ end
 
 puts count
 ```
+
+## map
+The map method (also known as collect) transforms each element of a collection according to the block provided and returns a new array of transformed elements
+
+```ruby
+numbers = [1, 2, 3, 4, 5]
+
+squares = numbers.map do |number|
+  number * number
+end
+
+pp squares
+```
+
+Also
+```ruby
+numbers = [1, 2, 3, 4, 5]
+
+squares = numbers.map { |number| number * number }
+
+pp squares
+```
+
+## select and reject methods
+- select returns a new array containing all elements for which the block returns true.
+- reject returns a new array containing all elements for which the block returns false.
+```ruby
+numbers = [1, 2, 3, 4, 5]
+
+even_numbers = numbers.select do |number|
+  number.even?
+end
+
+pp even_numbers
+```
+
+```ruby
+numbers = [1, 2, 3, 4, 5]
+
+odd_numbers = numbers.reject do |number|
+  number.even?
+end
+
+pp odd_numbers
+```
